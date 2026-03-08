@@ -12,7 +12,7 @@ Skill-Bridge is an intelligent, interactive career navigation platform. It utili
 ## Tech Stack
 - **Frontend**: Next.js 15, React, Framer Motion, Zustand, Tailwind CSS, ShadCN
 - **Backend**: FastAPI, Python, LangChain, FAISS, OpenAI Embeddings & GPT-4o
-- **Data**: Synthetic CSV catalogs processing 40,000+ courses and 100+ simulated tech positions.
+- **Data**: Open sourced real data of CSV catalogs processing 40,000+ courses and 100+ simulated tech positions.
 
 ## Getting Started
 
