@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation"
 import { useAppStore } from "@/store/useAppStore"
 import axios from "axios"
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from "recharts"
+import AIDisclaimer from "@/components/AIDisclaimer"
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api"
 
@@ -347,6 +348,10 @@ export default function InterviewDashboard() {
                                 View Roadmap
                             </button>
                         </div>
+
+                        <div className="w-full max-w-2xl mx-auto mt-8">
+                            <AIDisclaimer />
+                        </div>
                     </motion.div>
                 )}
 
@@ -375,6 +380,10 @@ export default function InterviewDashboard() {
                             className="px-8 py-4 rounded-full font-bold flex items-center gap-2 bg-ember text-cream hover:bg-ember-500 transition-all ember-glow disabled:opacity-50">
                             {isStarting ? <><Loader2 className="w-5 h-5 animate-spin" /> Starting...</> : <><Mic className="w-5 h-5" /> Begin Technical Round</>}
                         </button>
+
+                        <div className="w-full max-w-2xl mt-4">
+                            <AIDisclaimer />
+                        </div>
                     </motion.div>
                 )}
 
@@ -389,6 +398,7 @@ export default function InterviewDashboard() {
                                     isSpeaking ? 'bg-olive-200 border-cream/20' :
                                         isTranscribing || isProcessing ? 'bg-olive-200 border-cream/10' :
                                             'bg-olive-300 border-cream/5 hover:border-cream/10'}`}
+                            data-testid="mic-circle"
                             onClick={() => { if (isDisabled && !isRecording) return; if (isRecording) { stopRecording() } else { startRecording() } }}
                         >
                             {isRecording ? (

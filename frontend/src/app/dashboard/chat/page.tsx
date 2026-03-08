@@ -6,6 +6,7 @@ import { Github, Upload, ArrowRight, Loader2, CheckCircle2, Briefcase, Code2, Sp
 import { useRouter } from "next/navigation"
 import api from "@/lib/api"
 import { useAppStore } from "@/store/useAppStore"
+import AIDisclaimer from "@/components/AIDisclaimer"
 
 export default function OnboardingWizard() {
     const [step, setStep] = useState(1)
@@ -469,6 +470,10 @@ export default function OnboardingWizard() {
                     )}
 
                 </AnimatePresence>
+
+                <div className="w-full max-w-2xl mt-4">
+                    <AIDisclaimer />
+                </div>
             </div>
         </div>
     )

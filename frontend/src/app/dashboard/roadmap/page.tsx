@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useAppStore } from "@/store/useAppStore"
 import { useRouter } from "next/navigation"
 import { Loader2, AlertCircle, BookOpen, Clock, Star, ArrowLeft, ArrowRight, Mic, Target, Zap, ExternalLink, CheckCircle2, Circle, X, GraduationCap, Sparkles, Download } from "lucide-react"
+import Link from "next/link"
+import AIDisclaimer from "@/components/AIDisclaimer"
 import api from "@/lib/api"
 import {
     Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,

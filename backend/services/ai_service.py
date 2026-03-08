@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import pandas as pd
 from typing import List, Dict, Any
 from urllib.parse import quote_plus
@@ -19,19 +20,40 @@ from models import CourseRecommendation, ProjectRecommendation, CertificationRec
 load_dotenv()
 
 # Initialize Models
-# Using OpenAI specifically via Martian gateway (if configured by base url) or directly
 chat_llm = ChatOpenAI(
     model="gpt-4o-mini",
     api_key=os.getenv("OPENAI_API_KEY"),
     temperature=0.7
 )
 
-# OpenAI for embeddings (replaced Cohere)
 embeddings = OpenAIEmbeddings(
     model="text-embedding-3-small",
     api_key=os.getenv("OPENAI_API_KEY")
 )
 
+class SafetyGuardrail:
+    """Responsible AI layer for filtering harmful content and redacting PII."""
+    
+    @staticmethod
+    def preprocess_query(query: str) -> str:
+        """Simple check for prompt injection or harmful keywords."""
+        harmful_keywords = ["ignore initial instructions", "system prompt", "bypass", "jailbreak"]
+        for kw in harmful_keywords:
+            if kw in query.lower():
+                print(f"[SAFETY] Flagged potential prompt injection: {kw}")
+                return "The user asked a question outside of professional career coaching boundaries."
+        return query
+
+    @staticmethod
+    def redact_pii(text: str) -> str:
+        """Redact potential PII like emails and phone numbers."""
+        # Email regex
+        text = re.sub(r'[\w\.-]+@[\w\.-]+\.\w+', '[REDACTED EMAIL]', text)
+        # Phone regex (simple version)
+        text = re.sub(r'\b\d{3}[-.]?\d{3}[-.]?\d{4}\b', '[REDACTED PHONE]', text)
+        return text
+
+# --- Original code follows ---
 vector_store = None
 certifications_df = pd.DataFrame()
 
