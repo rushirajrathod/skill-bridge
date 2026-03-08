@@ -26,7 +26,7 @@ Skill-Bridge is an intelligent, interactive career navigation platform. It utili
 - **Backend**: FastAPI, Python, LangChain, FAISS, OpenAI Embeddings & GPT-4o
 - **Data**: Open sourced real data of CSV catalogs processing 40,000+ courses and 100+ simulated tech positions.
 
-## Machine Learning Architecture 🧠
+## AI/Machine Learning Architecture 🧠
 
 Skill-Bridge utilizes a multi-layered ML approach to ensure high-fidelity career guidance:
 
