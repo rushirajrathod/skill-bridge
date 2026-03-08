@@ -1,0 +1,1794 @@
+[
+  {
+    "title": "Frontend Engineer",
+    "description": "Build interactive user interfaces and responsive web applications using modern JavaScript frameworks.",
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Git",
+      "REST APIs",
+      "Webpack"
+    ]
+  },
+  {
+    "title": "Frontend Developer",
+    "description": "Create pixel-perfect, accessible web interfaces with a focus on performance and user experience.",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Vue.js",
+      "HTML",
+      "CSS",
+      "SASS",
+      "Responsive Design",
+      "Git",
+      "Jest",
+      "Figma"
+    ]
+  },
+  {
+    "title": "Senior Frontend Engineer",
+    "description": "Lead frontend architecture decisions, mentor junior developers, and deliver high-performance web applications.",
+    "skills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "GraphQL",
+      "Redux",
+      "Webpack",
+      "CI/CD",
+      "Performance Optimization",
+      "Testing",
+      "System Design"
+    ]
+  },
+  {
+    "title": "React Developer",
+    "description": "Develop and maintain React-based applications with modern state management and server-side rendering.",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Redux",
+      "React Query",
+      "Tailwind CSS",
+      "Jest",
+      "Cypress",
+      "Git",
+      "REST APIs"
+    ]
+  },
+  {
+    "title": "UI Developer",
+    "description": "Implement visually stunning, accessible user interfaces that delight users and meet design specifications.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "SASS",
+      "Accessibility",
+      "Responsive Design",
+      "Figma",
+      "Animation",
+      "Git"
+    ]
+  },
+  {
+    "title": "Backend Engineer",
+    "description": "Design, build, and maintain scalable backend services, APIs, and microservices architectures.",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "SQL",
+      "PostgreSQL",
+      "Docker",
+      "AWS",
+      "REST APIs",
+      "Git",
+      "Redis",
+      "Microservices"
+    ]
+  },
+  {
+    "title": "Backend Developer",
+    "description": "Build robust server-side applications with a focus on data processing and API development.",
+    "skills": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Celery",
+      "Docker",
+      "REST APIs",
+      "Git",
+      "Linux",
+      "RabbitMQ"
+    ]
+  },
+  {
+    "title": "Senior Backend Engineer",
+    "description": "Architect and scale backend systems handling millions of requests, ensuring reliability and performance.",
+    "skills": [
+      "Python",
+      "Go",
+      "PostgreSQL",
+      "Kubernetes",
+      "AWS",
+      "gRPC",
+      "Microservices",
+      "System Design",
+      "CI/CD",
+      "Monitoring"
+    ]
+  },
+  {
+    "title": "Java Backend Developer",
+    "description": "Build enterprise-grade backend systems using Java and Spring ecosystem.",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Hibernate",
+      "MySQL",
+      "Maven",
+      "Docker",
+      "REST APIs",
+      "Kafka",
+      "JUnit",
+      "Git"
+    ]
+  },
+  {
+    "title": "Node.js Developer",
+    "description": "Develop server-side applications and APIs using Node.js and Express.",
+    "skills": [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "MongoDB",
+      "REST APIs",
+      "GraphQL",
+      "Docker",
+      "Jest",
+      "Git",
+      "Redis"
+    ]
+  },
+  {
+    "title": "Full Stack Engineer",
+    "description": "Work across the entire stack from database to UI, delivering end-to-end features.",
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker",
+      "AWS"
+    ]
+  },
+  {
+    "title": "Full Stack Developer",
+    "description": "Build complete web applications from frontend interfaces to backend services and databases.",
+    "skills": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Express",
+      "TypeScript",
+      "Docker",
+      "Git",
+      "REST APIs",
+      "CI/CD"
+    ]
+  },
+  {
+    "title": "Senior Full Stack Engineer",
+    "description": "Lead full-stack development projects, making architecture decisions across frontend and backend systems.",
+    "skills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Python",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "System Design",
+      "CI/CD"
+    ]
+  },
+  {
+    "title": "MERN Stack Developer",
+    "description": "Build applications using MongoDB, Express, React, and Node.js technology stack.",
+    "skills": [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "JavaScript",
+      "TypeScript",
+      "REST APIs",
+      "Git",
+      "Docker",
+      "Jest"
+    ]
+  },
+  {
+    "title": "Data Scientist",
+    "description": "Analyze complex datasets, build predictive models, and derive actionable insights for business decisions.",
+    "skills": [
+      "Python",
+      "Pandas",
+      "Scikit-Learn",
+      "SQL",
+      "Machine Learning",
+      "Data Visualization",
+      "Jupyter",
+      "Statistics",
+      "R",
+      "Tableau"
+    ]
+  },
+  {
+    "title": "Senior Data Scientist",
+    "description": "Lead data science initiatives including experiment design, model development, and stakeholder communication.",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "Statistics",
+      "A/B Testing",
+      "SQL",
+      "TensorFlow",
+      "NLP",
+      "Data Visualization",
+      "Communication"
+    ]
+  },
+  {
+    "title": "Data Scientist - NLP",
+    "description": "Develop natural language processing models for text classification, sentiment analysis, and information extraction.",
+    "skills": [
+      "Python",
+      "NLP",
+      "Transformers",
+      "Hugging Face",
+      "BERT",
+      "SpaCy",
+      "Deep Learning",
+      "PyTorch",
+      "SQL",
+      "Docker"
+    ]
+  },
+  {
+    "title": "Data Scientist - Computer Vision",
+    "description": "Build computer vision models for image recognition, object detection, and video analysis.",
+    "skills": [
+      "Python",
+      "Computer Vision",
+      "OpenCV",
+      "PyTorch",
+      "TensorFlow",
+      "CNNs",
+      "Deep Learning",
+      "Docker",
+      "AWS",
+      "Data Augmentation"
+    ]
+  },
+  {
+    "title": "DevOps Engineer",
+    "description": "Manage cloud infrastructure, CI/CD pipelines, and ensure high availability of production services.",
+    "skills": [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Terraform",
+      "CI/CD",
+      "Git",
+      "Python",
+      "Monitoring",
+      "Shell Scripting"
+    ]
+  },
+  {
+    "title": "Senior DevOps Engineer",
+    "description": "Design and implement cloud-native infrastructure with focus on automation, security, and observability.",
+    "skills": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Docker",
+      "Ansible",
+      "Prometheus",
+      "Grafana",
+      "Python",
+      "Infrastructure as Code",
+      "Security"
+    ]
+  },
+  {
+    "title": "DevOps Architect",
+    "description": "Define DevOps strategy and tooling across the organization, establishing best practices for deployment and operations.",
+    "skills": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Azure",
+      "CI/CD",
+      "Infrastructure as Code",
+      "System Design",
+      "Security",
+      "Monitoring",
+      "GitOps"
+    ]
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "description": "Deploy and scale machine learning models into production environments with robust MLOps practices.",
+    "skills": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Docker",
+      "AWS",
+      "FastAPI",
+      "Machine Learning",
+      "MLOps",
+      "Kubernetes",
+      "Data Pipelines"
+    ]
+  },
+  {
+    "title": "Senior Machine Learning Engineer",
+    "description": "Architect ML systems at scale, from feature engineering to model serving and monitoring.",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "Kubernetes",
+      "MLflow",
+      "Feature Engineering",
+      "Model Serving",
+      "AWS SageMaker",
+      "Docker",
+      "System Design"
+    ]
+  },
+  {
+    "title": "ML Engineer - Recommendation Systems",
+    "description": "Build and optimize recommendation systems using collaborative filtering and deep learning approaches.",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "Recommendation Systems",
+      "Deep Learning",
+      "SQL",
+      "Spark",
+      "A/B Testing",
+      "Docker",
+      "AWS",
+      "Feature Engineering"
+    ]
+  },
+  {
+    "title": "Cloud Architect",
+    "description": "Design and implement scalable, secure cloud architectures on AWS, Azure, or GCP.",
+    "skills": [
+      "AWS",
+      "Azure",
+      "GCP",
+      "Terraform",
+      "Kubernetes",
+      "Docker",
+      "Network Architecture",
+      "Security",
+      "System Design",
+      "Cost Optimization"
+    ]
+  },
+  {
+    "title": "Cloud Engineer",
+    "description": "Build and maintain cloud infrastructure, automate deployments, and optimize cloud costs.",
+    "skills": [
+      "AWS",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "CI/CD",
+      "Python",
+      "CloudFormation",
+      "Monitoring",
+      "Networking"
+    ]
+  },
+  {
+    "title": "Senior Cloud Engineer",
+    "description": "Lead cloud migration projects and design multi-region architectures with high availability.",
+    "skills": [
+      "AWS",
+      "Azure",
+      "Terraform",
+      "Kubernetes",
+      "Docker",
+      "Infrastructure as Code",
+      "Security",
+      "Networking",
+      "Monitoring",
+      "System Design"
+    ]
+  },
+  {
+    "title": "AWS Solutions Architect",
+    "description": "Design solutions on AWS platform, advise clients on best practices and architectural patterns.",
+    "skills": [
+      "AWS",
+      "EC2",
+      "S3",
+      "Lambda",
+      "CloudFormation",
+      "VPC",
+      "IAM",
+      "RDS",
+      "System Design",
+      "Security"
+    ]
+  },
+  {
+    "title": "Mobile Developer",
+    "description": "Build cross-platform or native mobile applications for iOS and Android platforms.",
+    "skills": [
+      "React Native",
+      "TypeScript",
+      "iOS",
+      "Android",
+      "REST APIs",
+      "Git",
+      "Firebase",
+      "Redux",
+      "App Store Deployment",
+      "UI/UX"
+    ]
+  },
+  {
+    "title": "iOS Developer",
+    "description": "Develop native iOS applications using Swift and SwiftUI for iPhone and iPad.",
+    "skills": [
+      "Swift",
+      "SwiftUI",
+      "UIKit",
+      "Xcode",
+      "Core Data",
+      "REST APIs",
+      "Git",
+      "CocoaPods",
+      "TestFlight",
+      "App Store Connect"
+    ]
+  },
+  {
+    "title": "Senior iOS Developer",
+    "description": "Lead iOS development teams, architect app modules, and ensure code quality.",
+    "skills": [
+      "Swift",
+      "SwiftUI",
+      "UIKit",
+      "Combine",
+      "Core Data",
+      "CI/CD",
+      "XCTest",
+      "Architecture Patterns",
+      "Performance Optimization",
+      "Git"
+    ]
+  },
+  {
+    "title": "Android Developer",
+    "description": "Build native Android applications using Kotlin and modern Android development practices.",
+    "skills": [
+      "Kotlin",
+      "Android SDK",
+      "Jetpack Compose",
+      "Room",
+      "Retrofit",
+      "REST APIs",
+      "Git",
+      "Firebase",
+      "MVVM",
+      "Coroutines"
+    ]
+  },
+  {
+    "title": "Senior Android Developer",
+    "description": "Architect Android applications, mentor developers, and implement complex features.",
+    "skills": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android SDK",
+      "Dagger/Hilt",
+      "Coroutines",
+      "Room",
+      "CI/CD",
+      "Architecture Patterns",
+      "Testing",
+      "Performance Optimization"
+    ]
+  },
+  {
+    "title": "Flutter Developer",
+    "description": "Build beautiful cross-platform mobile applications using Flutter and Dart.",
+    "skills": [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "REST APIs",
+      "State Management",
+      "Git",
+      "UI/UX",
+      "iOS",
+      "Android",
+      "CI/CD"
+    ]
+  },
+  {
+    "title": "Data Engineer",
+    "description": "Design and build data pipelines, ETL processes, and data warehouse architectures.",
+    "skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "AWS",
+      "Kafka",
+      "Data Modeling",
+      "ETL",
+      "Docker",
+      "Snowflake"
+    ]
+  },
+  {
+    "title": "Senior Data Engineer",
+    "description": "Architect enterprise data platforms, optimize data pipelines for scale, and establish data governance.",
+    "skills": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Kafka",
+      "Snowflake",
+      "dbt",
+      "AWS",
+      "Data Modeling",
+      "Docker",
+      "Kubernetes"
+    ]
+  },
+  {
+    "title": "Data Engineer - Streaming",
+    "description": "Build real-time data streaming pipelines using Kafka, Flink, or Spark Streaming.",
+    "skills": [
+      "Apache Kafka",
+      "Apache Flink",
+      "Spark Streaming",
+      "Python",
+      "Java",
+      "AWS Kinesis",
+      "Docker",
+      "SQL",
+      "Data Modeling",
+      "Monitoring"
+    ]
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "description": "Ensure system reliability, build monitoring solutions, and automate incident response.",
+    "skills": [
+      "Linux",
+      "Kubernetes",
+      "Prometheus",
+      "Grafana",
+      "Python",
+      "Docker",
+      "AWS",
+      "Terraform",
+      "Incident Management",
+      "SLOs"
+    ]
+  },
+  {
+    "title": "Senior SRE",
+    "description": "Define reliability practices, build chaos engineering frameworks, and lead on-call rotations.",
+    "skills": [
+      "Kubernetes",
+      "Prometheus",
+      "Grafana",
+      "Python",
+      "Go",
+      "Terraform",
+      "AWS",
+      "Chaos Engineering",
+      "System Design",
+      "Incident Management"
+    ]
+  },
+  {
+    "title": "Security Engineer",
+    "description": "Implement security controls, conduct vulnerability assessments, and secure cloud infrastructure.",
+    "skills": [
+      "Network Security",
+      "Cryptography",
+      "Python",
+      "AWS Security",
+      "Penetration Testing",
+      "SIEM",
+      "Firewalls",
+      "IAM",
+      "Risk Assessment",
+      "Compliance"
+    ]
+  },
+  {
+    "title": "Cybersecurity Analyst",
+    "description": "Monitor, detect, and respond to security threats and incidents across the organization.",
+    "skills": [
+      "SIEM",
+      "Network Security",
+      "Incident Response",
+      "Malware Analysis",
+      "Firewalls",
+      "IDS/IPS",
+      "Linux",
+      "Python",
+      "Forensics",
+      "Risk Management"
+    ]
+  },
+  {
+    "title": "Senior Security Engineer",
+    "description": "Lead security architecture decisions, design secure systems, and manage security operations.",
+    "skills": [
+      "Security Architecture",
+      "Penetration Testing",
+      "Cloud Security",
+      "Python",
+      "SIEM",
+      "Zero Trust",
+      "Compliance",
+      "Encryption",
+      "IAM",
+      "Threat Modeling"
+    ]
+  },
+  {
+    "title": "Application Security Engineer",
+    "description": "Secure the software development lifecycle, conduct code reviews, and implement SAST/DAST tooling.",
+    "skills": [
+      "OWASP",
+      "SAST",
+      "DAST",
+      "Python",
+      "Secure Coding",
+      "Code Review",
+      "CI/CD Security",
+      "Docker Security",
+      "API Security",
+      "Threat Modeling"
+    ]
+  },
+  {
+    "title": "QA Engineer",
+    "description": "Design and execute test strategies, write automated tests, and ensure software quality.",
+    "skills": [
+      "Selenium",
+      "Python",
+      "Java",
+      "Test Automation",
+      "API Testing",
+      "CI/CD",
+      "Jira",
+      "SQL",
+      "Git",
+      "Agile"
+    ]
+  },
+  {
+    "title": "Test Automation Engineer",
+    "description": "Build and maintain automated testing frameworks for web and mobile applications.",
+    "skills": [
+      "Selenium",
+      "Cypress",
+      "Python",
+      "JavaScript",
+      "CI/CD",
+      "REST API Testing",
+      "Git",
+      "Docker",
+      "Performance Testing",
+      "BDD"
+    ]
+  },
+  {
+    "title": "SDET",
+    "description": "Software Development Engineer in Test - build testing infrastructure and quality tools.",
+    "skills": [
+      "Java",
+      "Python",
+      "Selenium",
+      "REST APIs",
+      "Docker",
+      "CI/CD",
+      "Git",
+      "SQL",
+      "Test Frameworks",
+      "Performance Testing"
+    ]
+  },
+  {
+    "title": "Product Manager",
+    "description": "Define product strategy, prioritize features, and work with engineering teams to deliver value.",
+    "skills": [
+      "Product Strategy",
+      "Agile",
+      "Data Analysis",
+      "User Research",
+      "Roadmapping",
+      "A/B Testing",
+      "SQL",
+      "Communication",
+      "Stakeholder Management",
+      "Jira"
+    ]
+  },
+  {
+    "title": "Technical Product Manager",
+    "description": "Bridge technical and business teams, define technical requirements, and guide product development.",
+    "skills": [
+      "Product Strategy",
+      "System Design",
+      "SQL",
+      "API Design",
+      "Agile",
+      "Data Analysis",
+      "Technical Writing",
+      "Stakeholder Management",
+      "Python",
+      "Communication"
+    ]
+  },
+  {
+    "title": "UI/UX Designer",
+    "description": "Design intuitive user interfaces and conduct user research to improve product experiences.",
+    "skills": [
+      "Figma",
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Usability Testing",
+      "Design Systems",
+      "HTML",
+      "CSS",
+      "Accessibility",
+      "Typography"
+    ]
+  },
+  {
+    "title": "UX Researcher",
+    "description": "Plan and conduct user research studies to inform product design and strategy decisions.",
+    "skills": [
+      "User Research",
+      "Usability Testing",
+      "Survey Design",
+      "Data Analysis",
+      "Qualitative Research",
+      "A/B Testing",
+      "Figma",
+      "Communication",
+      "Statistics",
+      "Stakeholder Management"
+    ]
+  },
+  {
+    "title": "Database Administrator",
+    "description": "Manage, optimize, and secure database systems to ensure data availability and performance.",
+    "skills": [
+      "SQL",
+      "PostgreSQL",
+      "MySQL",
+      "Oracle",
+      "Database Optimization",
+      "Backup and Recovery",
+      "Replication",
+      "Linux",
+      "Shell Scripting",
+      "Monitoring"
+    ]
+  },
+  {
+    "title": "Systems Administrator",
+    "description": "Manage server infrastructure, automate system tasks, and ensure uptime of critical services.",
+    "skills": [
+      "Linux",
+      "Windows Server",
+      "Shell Scripting",
+      "Active Directory",
+      "Networking",
+      "Virtualization",
+      "Monitoring",
+      "Backup",
+      "DNS",
+      "Firewall"
+    ]
+  },
+  {
+    "title": "Network Engineer",
+    "description": "Design, implement, and troubleshoot enterprise network infrastructure including LAN, WAN, and wireless.",
+    "skills": [
+      "Networking",
+      "Cisco",
+      "TCP/IP",
+      "BGP",
+      "OSPF",
+      "Firewalls",
+      "VPN",
+      "DNS",
+      "Load Balancers",
+      "Network Monitoring"
+    ]
+  },
+  {
+    "title": "Senior Network Engineer",
+    "description": "Architect complex network solutions, lead network migration projects, and define standards.",
+    "skills": [
+      "Cisco",
+      "Juniper",
+      "BGP",
+      "OSPF",
+      "SD-WAN",
+      "Firewalls",
+      "Network Security",
+      "Load Balancers",
+      "Automation",
+      "Python"
+    ]
+  },
+  {
+    "title": "Blockchain Developer",
+    "description": "Build decentralized applications and smart contracts on blockchain platforms.",
+    "skills": [
+      "Solidity",
+      "Ethereum",
+      "Web3.js",
+      "Smart Contracts",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Cryptography",
+      "DeFi",
+      "Git"
+    ]
+  },
+  {
+    "title": "Game Developer",
+    "description": "Develop interactive games using game engines and programming languages.",
+    "skills": [
+      "Unity",
+      "C#",
+      "Game Design",
+      "3D Modeling",
+      "Physics Simulation",
+      "Shader Programming",
+      "Git",
+      "Performance Optimization",
+      "Multiplayer Networking",
+      "AI"
+    ]
+  },
+  {
+    "title": "Unreal Engine Developer",
+    "description": "Create AAA-quality games and interactive experiences using Unreal Engine.",
+    "skills": [
+      "Unreal Engine",
+      "C++",
+      "Blueprints",
+      "3D Modeling",
+      "Animation",
+      "Physics",
+      "Multiplayer",
+      "Git",
+      "Performance Optimization",
+      "Shader Programming"
+    ]
+  },
+  {
+    "title": "Embedded Systems Engineer",
+    "description": "Design and program firmware for embedded systems and IoT devices.",
+    "skills": [
+      "C",
+      "C++",
+      "Embedded Linux",
+      "RTOS",
+      "Microcontrollers",
+      "I2C",
+      "SPI",
+      "UART",
+      "PCB Design",
+      "Debugging"
+    ]
+  },
+  {
+    "title": "IoT Engineer",
+    "description": "Build Internet of Things solutions connecting hardware devices to cloud platforms.",
+    "skills": [
+      "Python",
+      "C",
+      "MQTT",
+      "AWS IoT",
+      "Embedded Systems",
+      "Microcontrollers",
+      "REST APIs",
+      "Docker",
+      "Linux",
+      "Networking"
+    ]
+  },
+  {
+    "title": "AI Research Engineer",
+    "description": "Conduct cutting-edge AI research and publish papers on novel machine learning approaches.",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "Deep Learning",
+      "Machine Learning",
+      "Research Methods",
+      "Linear Algebra",
+      "Statistics",
+      "NLP",
+      "Computer Vision"
+    ]
+  },
+  {
+    "title": "AI Engineer",
+    "description": "Develop and deploy AI-powered features and services in production applications.",
+    "skills": [
+      "Python",
+      "LangChain",
+      "OpenAI API",
+      "RAG",
+      "Vector Databases",
+      "FastAPI",
+      "Docker",
+      "Prompt Engineering",
+      "Machine Learning",
+      "AWS"
+    ]
+  },
+  {
+    "title": "NLP Engineer",
+    "description": "Build natural language processing systems for text understanding, generation, and analysis.",
+    "skills": [
+      "Python",
+      "NLP",
+      "Transformers",
+      "Hugging Face",
+      "BERT",
+      "GPT",
+      "SpaCy",
+      "PyTorch",
+      "Docker",
+      "REST APIs"
+    ]
+  },
+  {
+    "title": "Computer Vision Engineer",
+    "description": "Develop computer vision solutions for image/video analysis and autonomous systems.",
+    "skills": [
+      "Python",
+      "OpenCV",
+      "PyTorch",
+      "TensorFlow",
+      "CNNs",
+      "Object Detection",
+      "Image Segmentation",
+      "CUDA",
+      "Docker",
+      "Linux"
+    ]
+  },
+  {
+    "title": "Robotics Engineer",
+    "description": "Design and program robotic systems combining mechanical, electrical, and software engineering.",
+    "skills": [
+      "Python",
+      "C++",
+      "ROS",
+      "Computer Vision",
+      "Control Systems",
+      "Sensor Fusion",
+      "Linux",
+      "Simulation",
+      "Hardware Integration",
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "Solutions Architect",
+    "description": "Design technical solutions for clients, mapping business requirements to technology platforms.",
+    "skills": [
+      "System Design",
+      "AWS",
+      "Azure",
+      "Microservices",
+      "API Design",
+      "Security",
+      "Networking",
+      "Docker",
+      "Kubernetes",
+      "Communication"
+    ]
+  },
+  {
+    "title": "Technical Lead",
+    "description": "Lead engineering teams, make architectural decisions, and ensure code quality and delivery.",
+    "skills": [
+      "System Design",
+      "Code Review",
+      "Mentoring",
+      "Agile",
+      "Git",
+      "CI/CD",
+      "Architecture Patterns",
+      "Communication",
+      "Python",
+      "TypeScript"
+    ]
+  },
+  {
+    "title": "Engineering Manager",
+    "description": "Manage engineering teams, drive technical strategy, and support career development of engineers.",
+    "skills": [
+      "Team Management",
+      "Agile",
+      "System Design",
+      "Hiring",
+      "Mentoring",
+      "Communication",
+      "Project Management",
+      "Technical Strategy",
+      "OKRs",
+      "Conflict Resolution"
+    ]
+  },
+  {
+    "title": "CTO",
+    "description": "Define technical vision and strategy, build engineering culture, and drive innovation across the organization.",
+    "skills": [
+      "Technical Strategy",
+      "System Design",
+      "Leadership",
+      "Budgeting",
+      "Hiring",
+      "Communication",
+      "Cloud Architecture",
+      "Security",
+      "Product Strategy",
+      "Innovation"
+    ]
+  },
+  {
+    "title": "Data Analyst",
+    "description": "Analyze data to identify trends, create visualizations, and deliver actionable business insights.",
+    "skills": [
+      "SQL",
+      "Python",
+      "Excel",
+      "Tableau",
+      "Power BI",
+      "Statistics",
+      "Data Visualization",
+      "Communication",
+      "A/B Testing",
+      "Google Analytics"
+    ]
+  },
+  {
+    "title": "Senior Data Analyst",
+    "description": "Lead analytics projects, build dashboards, and guide data-driven decision making.",
+    "skills": [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Power BI",
+      "Statistics",
+      "A/B Testing",
+      "Data Modeling",
+      "Communication",
+      "Looker",
+      "Google Analytics"
+    ]
+  },
+  {
+    "title": "Business Intelligence Analyst",
+    "description": "Build and maintain BI dashboards, define KPI metrics, and support strategic business decisions.",
+    "skills": [
+      "SQL",
+      "Tableau",
+      "Power BI",
+      "Looker",
+      "ETL",
+      "Data Modeling",
+      "Python",
+      "Excel",
+      "Communication",
+      "Statistics"
+    ]
+  },
+  {
+    "title": "Quantitative Analyst",
+    "description": "Develop quantitative models for financial trading, risk assessment, and portfolio optimization.",
+    "skills": [
+      "Python",
+      "Statistics",
+      "Machine Learning",
+      "Linear Algebra",
+      "Time Series Analysis",
+      "SQL",
+      "R",
+      "Stochastic Calculus",
+      "Risk Models",
+      "C++"
+    ]
+  },
+  {
+    "title": "Platform Engineer",
+    "description": "Build and maintain internal developer platforms that accelerate engineering productivity.",
+    "skills": [
+      "Kubernetes",
+      "Docker",
+      "Terraform",
+      "AWS",
+      "CI/CD",
+      "Python",
+      "Go",
+      "GitOps",
+      "Service Mesh",
+      "Monitoring"
+    ]
+  },
+  {
+    "title": "Infrastructure Engineer",
+    "description": "Design and manage core infrastructure including compute, storage, and networking.",
+    "skills": [
+      "Linux",
+      "AWS",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Networking",
+      "Monitoring",
+      "Python",
+      "Shell Scripting",
+      "Configuration Management"
+    ]
+  },
+  {
+    "title": "Release Engineer",
+    "description": "Manage software releases, build CI/CD pipelines, and ensure smooth deployments.",
+    "skills": [
+      "CI/CD",
+      "Jenkins",
+      "GitHub Actions",
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "Python",
+      "Shell Scripting",
+      "Release Management",
+      "Monitoring"
+    ]
+  },
+  {
+    "title": "Technical Writer",
+    "description": "Create clear, comprehensive technical documentation for APIs, SDKs, and developer tools.",
+    "skills": [
+      "Technical Writing",
+      "API Documentation",
+      "Markdown",
+      "Git",
+      "HTML",
+      "Developer Experience",
+      "Diagramming",
+      "Communication",
+      "Swagger",
+      "Information Architecture"
+    ]
+  },
+  {
+    "title": "Developer Advocate",
+    "description": "Build developer communities, create educational content, and represent developers within the company.",
+    "skills": [
+      "Public Speaking",
+      "Technical Writing",
+      "Python",
+      "JavaScript",
+      "Git",
+      "Community Building",
+      "Content Creation",
+      "API Design",
+      "Communication",
+      "Developer Experience"
+    ]
+  },
+  {
+    "title": "Salesforce Developer",
+    "description": "Customize and extend Salesforce platform using Apex, Lightning, and integrations.",
+    "skills": [
+      "Apex",
+      "Lightning Web Components",
+      "SOQL",
+      "Salesforce Administration",
+      "REST APIs",
+      "JavaScript",
+      "Integration",
+      "Git",
+      "Data Modeling",
+      "Testing"
+    ]
+  },
+  {
+    "title": "SAP Consultant",
+    "description": "Implement and customize SAP ERP systems for enterprise clients.",
+    "skills": [
+      "SAP",
+      "ABAP",
+      "SAP S/4HANA",
+      "Business Process",
+      "Data Migration",
+      "Integration",
+      "SQL",
+      "Project Management",
+      "Communication",
+      "Configuration"
+    ]
+  },
+  {
+    "title": "ETL Developer",
+    "description": "Design and build ETL pipelines to move data between systems for analytics and reporting.",
+    "skills": [
+      "SQL",
+      "Python",
+      "ETL",
+      "Informatica",
+      "Apache Spark",
+      "Data Modeling",
+      "AWS",
+      "Airflow",
+      "Data Quality",
+      "Shell Scripting"
+    ]
+  },
+  {
+    "title": "Tableau Developer",
+    "description": "Design interactive dashboards and data visualizations using Tableau.",
+    "skills": [
+      "Tableau",
+      "SQL",
+      "Data Visualization",
+      "Data Modeling",
+      "Dashboard Design",
+      "Python",
+      "Statistics",
+      "Communication",
+      "Tableau Server",
+      "ETL"
+    ]
+  },
+  {
+    "title": "Power Platform Developer",
+    "description": "Build low-code applications and automations using Microsoft Power Platform.",
+    "skills": [
+      "Power Apps",
+      "Power Automate",
+      "Power BI",
+      "SharePoint",
+      "Microsoft 365",
+      "SQL",
+      "REST APIs",
+      "Azure",
+      "Data Modeling",
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "Scrum Master",
+    "description": "Facilitate agile ceremonies, remove impediments, and coach teams on Scrum practices.",
+    "skills": [
+      "Scrum",
+      "Agile",
+      "Facilitation",
+      "Jira",
+      "Kanban",
+      "Coaching",
+      "Communication",
+      "Conflict Resolution",
+      "Retrospectives",
+      "Sprint Planning"
+    ]
+  },
+  {
+    "title": "Site Reliability Architect",
+    "description": "Define reliability strategy and build self-healing systems that handle failures gracefully.",
+    "skills": [
+      "System Design",
+      "Kubernetes",
+      "AWS",
+      "Terraform",
+      "Monitoring",
+      "Chaos Engineering",
+      "Python",
+      "Go",
+      "Service Mesh",
+      "SLO/SLI"
+    ]
+  },
+  {
+    "title": "MLOps Engineer",
+    "description": "Build and maintain ML operations pipelines from model training to deployment and monitoring.",
+    "skills": [
+      "Python",
+      "MLflow",
+      "Kubernetes",
+      "Docker",
+      "AWS SageMaker",
+      "CI/CD",
+      "Airflow",
+      "Terraform",
+      "Model Monitoring",
+      "Feature Store"
+    ]
+  },
+  {
+    "title": "Data Platform Engineer",
+    "description": "Build scalable data platforms supporting analytics, ML, and business intelligence workloads.",
+    "skills": [
+      "Spark",
+      "Kafka",
+      "Airflow",
+      "Snowflake",
+      "dbt",
+      "Python",
+      "SQL",
+      "AWS",
+      "Terraform",
+      "Data Governance"
+    ]
+  },
+  {
+    "title": "API Developer",
+    "description": "Design and implement RESTful and GraphQL APIs for web and mobile applications.",
+    "skills": [
+      "REST APIs",
+      "GraphQL",
+      "Python",
+      "Node.js",
+      "OpenAPI",
+      "Docker",
+      "API Security",
+      "Rate Limiting",
+      "Caching",
+      "Git"
+    ]
+  },
+  {
+    "title": "Microservices Architect",
+    "description": "Design microservices architectures with proper service boundaries, communication patterns, and resilience.",
+    "skills": [
+      "Microservices",
+      "Docker",
+      "Kubernetes",
+      "gRPC",
+      "Event Driven Architecture",
+      "Kafka",
+      "System Design",
+      "API Gateway",
+      "Service Mesh",
+      "Monitoring"
+    ]
+  },
+  {
+    "title": "PHP Developer",
+    "description": "Build and maintain web applications using PHP and modern PHP frameworks.",
+    "skills": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "REST APIs",
+      "Docker",
+      "Composer"
+    ]
+  },
+  {
+    "title": "Ruby on Rails Developer",
+    "description": "Develop web applications using Ruby on Rails with a focus on convention over configuration.",
+    "skills": [
+      "Ruby",
+      "Rails",
+      "PostgreSQL",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "REST APIs",
+      "RSpec",
+      "Docker"
+    ]
+  },
+  {
+    "title": "Go Developer",
+    "description": "Build high-performance backend services and CLI tools using Go.",
+    "skills": [
+      "Go",
+      "Docker",
+      "Kubernetes",
+      "REST APIs",
+      "gRPC",
+      "PostgreSQL",
+      "Redis",
+      "Git",
+      "Concurrency",
+      "Linux"
+    ]
+  },
+  {
+    "title": "Rust Developer",
+    "description": "Develop systems-level software and high-performance applications using Rust.",
+    "skills": [
+      "Rust",
+      "Systems Programming",
+      "Concurrency",
+      "Memory Safety",
+      "Linux",
+      "Docker",
+      "WebAssembly",
+      "Git",
+      "Performance Optimization",
+      "C"
+    ]
+  },
+  {
+    "title": "Scala Developer",
+    "description": "Build data-intensive applications using Scala and the JVM ecosystem.",
+    "skills": [
+      "Scala",
+      "Spark",
+      "Akka",
+      "JVM",
+      "SQL",
+      "Kafka",
+      "Docker",
+      "Functional Programming",
+      "REST APIs",
+      "Git"
+    ]
+  },
+  {
+    "title": "WordPress Developer",
+    "description": "Build and customize WordPress websites, themes, and plugins for clients.",
+    "skills": [
+      "WordPress",
+      "PHP",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "MySQL",
+      "WooCommerce",
+      "SEO",
+      "REST APIs",
+      "Git"
+    ]
+  },
+  {
+    "title": "Shopify Developer",
+    "description": "Build custom Shopify themes, apps, and integrations for e-commerce businesses.",
+    "skills": [
+      "Shopify",
+      "Liquid",
+      "JavaScript",
+      "React",
+      "GraphQL",
+      "HTML",
+      "CSS",
+      "REST APIs",
+      "Git",
+      "E-commerce"
+    ]
+  },
+  {
+    "title": "Accessibility Engineer",
+    "description": "Ensure web applications meet WCAG standards and are usable by people with disabilities.",
+    "skills": [
+      "Accessibility",
+      "WCAG",
+      "ARIA",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Screen Readers",
+      "Usability Testing",
+      "Figma",
+      "Communication"
+    ]
+  },
+  {
+    "title": "Performance Engineer",
+    "description": "Optimize application performance through profiling, load testing, and architecture improvements.",
+    "skills": [
+      "Performance Testing",
+      "JMeter",
+      "Gatling",
+      "Profiling",
+      "System Design",
+      "Linux",
+      "Docker",
+      "Monitoring",
+      "Python",
+      "SQL"
+    ]
+  },
+  {
+    "title": "Elasticsearch Engineer",
+    "description": "Build and maintain search infrastructure using Elasticsearch and related technologies.",
+    "skills": [
+      "Elasticsearch",
+      "Kibana",
+      "Logstash",
+      "Python",
+      "REST APIs",
+      "Data Modeling",
+      "Linux",
+      "Docker",
+      "Monitoring",
+      "SQL"
+    ]
+  },
+  {
+    "title": "GraphQL Developer",
+    "description": "Design and implement GraphQL APIs with schema design and resolver patterns.",
+    "skills": [
+      "GraphQL",
+      "Apollo",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "React",
+      "Docker",
+      "Schema Design",
+      "Git",
+      "REST APIs"
+    ]
+  },
+  {
+    "title": "Prompt Engineer",
+    "description": "Design and optimize prompts for large language models to achieve desired outputs.",
+    "skills": [
+      "Prompt Engineering",
+      "LLM",
+      "OpenAI API",
+      "Python",
+      "NLP",
+      "RAG",
+      "LangChain",
+      "Evaluation Metrics",
+      "Communication",
+      "Critical Thinking"
+    ]
+  },
+  {
+    "title": "AI Solutions Engineer",
+    "description": "Build AI-powered solutions integrating LLMs, embeddings, and vector databases into applications.",
+    "skills": [
+      "Python",
+      "LangChain",
+      "OpenAI API",
+      "RAG",
+      "FAISS",
+      "Pinecone",
+      "FastAPI",
+      "Docker",
+      "Prompt Engineering",
+      "Vector Databases"
+    ]
+  },
+  {
+    "title": "GenAI Engineer",
+    "description": "Develop generative AI applications using large language models and multimodal AI systems.",
+    "skills": [
+      "Python",
+      "LLM",
+      "LangChain",
+      "OpenAI API",
+      "Hugging Face",
+      "RAG",
+      "Vector Databases",
+      "FastAPI",
+      "Docker",
+      "Prompt Engineering"
+    ]
+  },
+  {
+    "title": "Computer Science Intern",
+    "description": "Support engineering teams with development tasks while learning professional software practices.",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "Git",
+      "Data Structures",
+      "Algorithms",
+      "SQL",
+      "REST APIs",
+      "Communication",
+      "Problem Solving",
+      "Debugging"
+    ]
+  },
+  {
+    "title": "Junior Software Engineer",
+    "description": "Write clean code, fix bugs, and contribute to feature development under mentorship.",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "Git",
+      "SQL",
+      "REST APIs",
+      "HTML",
+      "CSS",
+      "Data Structures",
+      "Algorithms",
+      "Testing"
+    ]
+  },
+  {
+    "title": "Software Engineer",
+    "description": "Design and implement software solutions, participate in code reviews, and collaborate with cross-functional teams.",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "Git",
+      "Docker",
+      "REST APIs",
+      "System Design",
+      "Testing",
+      "CI/CD"
+    ]
+  },
+  {
+    "title": "Senior Software Engineer",
+    "description": "Lead technical projects, mentor developers, and drive architectural decisions for complex systems.",
+    "skills": [
+      "System Design",
+      "Python",
+      "TypeScript",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "CI/CD",
+      "Code Review",
+      "Mentoring",
+      "Architecture Patterns"
+    ]
+  },
+  {
+    "title": "Staff Software Engineer",
+    "description": "Drive technical strategy across multiple teams, solve organization-level engineering challenges.",
+    "skills": [
+      "System Design",
+      "Architecture Patterns",
+      "Mentoring",
+      "Cross-team Collaboration",
+      "Python",
+      "Go",
+      "Kubernetes",
+      "AWS",
+      "Technical Writing",
+      "Leadership"
+    ]
+  },
+  {
+    "title": "Principal Engineer",
+    "description": "Define technical vision for the organization, evaluate emerging technologies, and guide architecture.",
+    "skills": [
+      "System Design",
+      "Technical Strategy",
+      "Leadership",
+      "Architecture Patterns",
+      "Cloud Architecture",
+      "Security",
+      "Communication",
+      "Mentoring",
+      "Innovation",
+      "Cost Optimization"
+    ]
+  },
+  {
+    "title": "Hadoop Developer",
+    "description": "Build big data solutions using Hadoop ecosystem for large-scale data processing.",
+    "skills": [
+      "Hadoop",
+      "Hive",
+      "Pig",
+      "MapReduce",
+      "Spark",
+      "Java",
+      "SQL",
+      "Linux",
+      "HDFS",
+      "YARN"
+    ]
+  },
+  {
+    "title": "Kubernetes Administrator",
+    "description": "Manage and maintain Kubernetes clusters in production environments.",
+    "skills": [
+      "Kubernetes",
+      "Docker",
+      "Helm",
+      "Linux",
+      "Networking",
+      "Monitoring",
+      "Prometheus",
+      "Grafana",
+      "Terraform",
+      "Shell Scripting"
+    ]
+  },
+  {
+    "title": "Azure Cloud Engineer",
+    "description": "Build and manage cloud solutions on Microsoft Azure platform.",
+    "skills": [
+      "Azure",
+      "Azure DevOps",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "PowerShell",
+      "Networking",
+      "Security",
+      "Monitoring",
+      "CI/CD"
+    ]
+  },
+  {
+    "title": "GCP Cloud Engineer",
+    "description": "Design and implement solutions on Google Cloud Platform.",
+    "skills": [
+      "GCP",
+      "BigQuery",
+      "Cloud Functions",
+      "Kubernetes",
+      "Terraform",
+      "Docker",
+      "Python",
+      "Networking",
+      "IAM",
+      "Monitoring"
+    ]
+  }
+]
