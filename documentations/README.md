@@ -1,6 +1,6 @@
-# Aura AI: Deep Technical Architecture & AI/ML Implementation
+#  Deep Technical Architecture & AI/ML Implementation
 
-Aura AI is an intelligent career navigation platform designed to bridge the "final mile" gap between academic knowledge and technical job requirements. This document outlines the advanced AI/ML systems and architectural decisions powering the platform.
+Skill bridge is an intelligent career navigation platform designed to bridge the "final mile" gap between academic knowledge and technical job requirements. This document outlines the advanced AI/ML systems and architectural decisions powering the platform.
 
 ---
 
