@@ -45,25 +45,26 @@ Skill-Bridge utilizes a multi-layered ML approach to ensure high-fidelity career
 - **Fuzzy String Matching**: Consolidation of disparate skill terminology across 100+ job sources.
 - **Weighted Word Overlap**: Prioritizes job description relevance based on title and skill density.
 --- 
-# Project Architecture (high level)
+## Project Architecture (high level)
 
-Frontend (Next.js)
-        |
-        |
-    FastAPI API
-        |
-        |
-   AI Orchestration
-     (LangChain)
-        |
-        |
-Vector Search (FAISS)
-        |
-        |
-Course Dataset (40k+)
-        |
-        |
-   SQLite Storage
+User
+  |
+  v
+Frontend (Next.js / React)
+  |
+  v
+FastAPI Backend API
+  |
+  v
+AI Orchestration Layer (LangChain)
+  |
+  +----------------------+
+  |                      |
+  v                      v
+Vector Search (FAISS)   SQLite Database
+  |                      |
+  v                      v
+Course Dataset (40,000+)  Application Data
    
 ---
 
