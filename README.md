@@ -109,4 +109,4 @@ npm test
 Navigate to `http://localhost:3000` to start your career transition roadmap!
 ---
 ## 4. Demo testing
-I have provided job descriptions sample and resume for demo testing
+I have provided job descriptions sample and resume for demo testing in demo-test folder
