@@ -66,10 +66,36 @@ interface AppState {
     addMessage: (msg: ChatMessage) => void
     setChatLoading: (loading: boolean) => void
 
+    // Courses State
+    courseSearch: {
+        results: any[]
+        query: string
+        platform: string
+        level: string
+        useRole: boolean
+        page: number
+        totalPages: number
+    }
+    setCourseSearch: (search: AppState['courseSearch']) => void
+
+    // Projects State
+    projectState: {
+        projects: Project[]
+        history: any[]
+        selectedProject: Project | null
+    }
+    setProjectState: (state: AppState['projectState']) => void
+
     // Roadmap State
     roadmap: Roadmap | null
     isRoadmapLoading: boolean
-    setRoadmap: (roadmap: Roadmap | null) => void
+    lastGeneratedParams: {
+        targetRole: string | null
+        targetJobDescription: string
+        currentSkills: string[]
+        timeInvestment: number
+    } | null
+    setRoadmap: (roadmap: Roadmap | null, params: AppState['lastGeneratedParams']) => void
     setRoadmapLoading: (loading: boolean) => void
 }
 
@@ -100,9 +126,30 @@ export const useAppStore = create<AppState>()(
             addMessage: (msg) => set((state) => ({ messages: [...state.messages, msg] })),
             setChatLoading: (loading) => set({ isChatLoading: loading }),
 
+            // Courses State
+            courseSearch: {
+                results: [],
+                query: "",
+                platform: "All",
+                level: "All",
+                useRole: false,
+                page: 1,
+                totalPages: 1
+            },
+            setCourseSearch: (search) => set({ courseSearch: search }),
+
+            // Projects State
+            projectState: {
+                projects: [],
+                history: [],
+                selectedProject: null
+            },
+            setProjectState: (state) => set({ projectState: state }),
+
             roadmap: null,
             isRoadmapLoading: false,
-            setRoadmap: (roadmap) => set({ roadmap }),
+            lastGeneratedParams: null,
+            setRoadmap: (roadmap, params) => set({ roadmap, lastGeneratedParams: params }),
             setRoadmapLoading: (loading) => set({ isRoadmapLoading: loading })
         }),
         {
@@ -117,6 +164,9 @@ export const useAppStore = create<AppState>()(
                 timeInvestment: state.timeInvestment,
                 sessionId: state.sessionId,
                 roadmap: state.roadmap,
+                lastGeneratedParams: state.lastGeneratedParams,
+                courseSearch: state.courseSearch,
+                projectState: state.projectState,
                 messages: state.messages
             }),
         }

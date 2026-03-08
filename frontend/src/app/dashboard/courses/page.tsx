@@ -32,16 +32,30 @@ interface Course {
 
 export default function CourseCatalog() {
     const router = useRouter()
-    const { targetRole } = useAppStore()
-    const [searchQuery, setSearchQuery] = useState("")
-    const [selectedPlatform, setSelectedPlatform] = useState("All")
-    const [selectedLevel, setSelectedLevel] = useState("All")
-    const [useRoleFilter, setUseRoleFilter] = useState(false)
-    const [page, setPage] = useState(1)
-    const [totalPages, setTotalPages] = useState(1)
-    const [courses, setCourses] = useState<Course[]>([])
+    const { targetRole, courseSearch, setCourseSearch } = useAppStore()
+
     const [isLoading, setIsLoading] = useState(false)
-    const [hasSearched, setHasSearched] = useState(false)
+    const [hasSearched, setHasSearched] = useState(courseSearch.results.length > 0)
+
+    const {
+        query: searchQuery,
+        platform: selectedPlatform,
+        level: selectedLevel,
+        useRole: useRoleFilter,
+        page,
+        totalPages,
+        results: courses
+    } = courseSearch
+
+    // Helper to update store
+    const updateSearch = (patch: Partial<typeof courseSearch>) => {
+        setCourseSearch({ ...courseSearch, ...patch })
+    }
+
+    const setPage = (p: number | ((prev: number) => number)) => {
+        const next = typeof p === 'function' ? p(page) : p
+        updateSearch({ page: next })
+    }
 
     // We use a ref to track filter changes vs page changes
     const filterHash = `${searchQuery.trim()}|${selectedPlatform}|${selectedLevel}|${useRoleFilter}`
@@ -57,16 +71,19 @@ export default function CourseCatalog() {
             if (useRoleFilter && targetRole) params.target_role = targetRole
 
             const resp = await api.get('/courses/search', { params })
-            setCourses(resp.data.courses || [])
-            setTotalPages(resp.data.total_pages || 1)
+            updateSearch({
+                results: resp.data.courses || [],
+                totalPages: resp.data.total_pages || 1,
+                page: currentPage
+            })
             setHasSearched(true)
         } catch (err) {
             console.error("Course search failed:", err)
-            setCourses([])
+            updateSearch({ results: [] })
         } finally {
             setIsLoading(false)
         }
-    }, [searchQuery, selectedPlatform, selectedLevel, useRoleFilter, targetRole])
+    }, [searchQuery, selectedPlatform, selectedLevel, useRoleFilter, targetRole, courseSearch])
 
     useEffect(() => {
         let currentPage = page
@@ -75,6 +92,11 @@ export default function CourseCatalog() {
             setPage(1)
             currentPage = 1
             prevFilterHash.current = filterHash
+            // Clear current results to show loading
+            updateSearch({ results: [], page: 1 })
+        } else if (courses.length > 0) {
+            // Already have results for these filters/page
+            return
         }
 
         const timer = setTimeout(() => {
@@ -124,7 +146,7 @@ export default function CourseCatalog() {
                         <input
                             placeholder="Search courses... e.g. machine learning, react, python"
                             value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
+                            onChange={(e) => updateSearch({ query: e.target.value })}
                             className="w-full pl-12 pr-4 py-3.5 bg-olive-200 border border-cream/5 rounded-xl text-cream placeholder:text-cream/15 focus:outline-none focus:border-ember/30 transition-colors text-sm"
                         />
                         {isLoading && <Loader2 className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-ember animate-spin" />}
@@ -136,7 +158,7 @@ export default function CourseCatalog() {
                             <Filter className="w-3.5 h-3.5" /> Platform:
                         </div>
                         {PLATFORMS.map((p) => (
-                            <button key={p} onClick={() => setSelectedPlatform(p)}
+                            <button key={p} onClick={() => updateSearch({ platform: p })}
                                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${selectedPlatform === p
                                     ? 'bg-ember text-cream' : 'bg-olive-200 text-cream/30 hover:text-cream/60 border border-cream/5'}`}>
                                 {p}
@@ -149,7 +171,7 @@ export default function CourseCatalog() {
                             <GraduationCap className="w-3.5 h-3.5" /> Level:
                         </div>
                         {LEVELS.map((l) => (
-                            <button key={l} onClick={() => setSelectedLevel(l)}
+                            <button key={l} onClick={() => updateSearch({ level: l })}
                                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${selectedLevel === l
                                     ? 'bg-ember text-cream' : 'bg-olive-200 text-cream/30 hover:text-cream/60 border border-cream/5'}`}>
                                 {l}
@@ -160,7 +182,7 @@ export default function CourseCatalog() {
                             <>
                                 <div className="w-px h-5 bg-cream/5 mx-2" />
                                 <button
-                                    onClick={() => setUseRoleFilter(!useRoleFilter)}
+                                    onClick={() => updateSearch({ useRole: !useRoleFilter })}
                                     className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-2 ${useRoleFilter ? 'bg-ember text-cream' : 'bg-olive-200 text-cream/30 hover:text-cream/60 border border-cream/5'}`}
                                 >
                                     <Target className="w-3.5 h-3.5" />
@@ -177,7 +199,7 @@ export default function CourseCatalog() {
                         {hasSearched && `${courses.length} course${courses.length !== 1 ? 's' : ''} found`}
                     </p>
                     {searchQuery && (
-                        <button onClick={() => setSearchQuery("")} className="text-xs text-ember hover:text-ember-300 transition-colors">
+                        <button onClick={() => updateSearch({ query: "" })} className="text-xs text-ember hover:text-ember-300 transition-colors">
                             Clear search
                         </button>
                     )}

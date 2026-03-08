@@ -10,18 +10,21 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 export default function ProjectsHub() {
-    const { targetRole, roadmap, sessionId } = useAppStore()
+    const { targetRole, roadmap, sessionId, projectState, setProjectState } = useAppStore()
+    const { projects, history: chatHistory, selectedProject } = projectState
     const router = useRouter()
 
-    const [projects, setProjects] = useState<Project[]>([])
-    const [isGenerating, setIsGenerating] = useState(true)
-    const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+    const [isGenerating, setIsGenerating] = useState(projects.length === 0)
     const [error, setError] = useState<string | null>(null)
 
     const [chatInput, setChatInput] = useState("")
-    const [chatHistory, setChatHistory] = useState<{ role: 'user' | 'ai', content: string }[]>([])
     const [isChatting, setIsChatting] = useState(false)
     const messagesEndRef = useRef<HTMLDivElement>(null)
+
+    // Helper to update store
+    const updateProjectState = (patch: Partial<typeof projectState>) => {
+        setProjectState({ ...projectState, ...patch })
+    }
 
     useEffect(() => {
         if (!targetRole || !roadmap) {
@@ -29,18 +32,28 @@ export default function ProjectsHub() {
             return
         }
 
+        if (projects.length > 0) {
+            setIsGenerating(false)
+            return
+        }
+
         // Generate projects on the fly (since we decoupled them from roadmap)
         api.post('/projects/generate', {
-            target_role: targetRole,
+            target_role: roadmap.role || targetRole,
             missing_skills: roadmap.missing_skills
         }).then(res => {
-            setProjects(res.data.projects || [])
-            if (res.data.projects && res.data.projects.length > 0) {
-                setSelectedProject(res.data.projects[0])
-                setChatHistory([{
-                    role: 'ai',
-                    content: `Hi! Let's talk about **${res.data.projects[0].title}**. What part of this project would you like to build first, or what concepts can I explain for you?`
-                }])
+            const newProjects = res.data.projects || []
+            if (newProjects.length > 0) {
+                updateProjectState({
+                    projects: newProjects,
+                    selectedProject: newProjects[0],
+                    history: [{
+                        role: 'ai',
+                        content: `Hi! Let's talk about **${newProjects[0].title}**. What part of this project would you like to build first, or what concepts can I explain for you?`
+                    }]
+                })
+            } else {
+                updateProjectState({ projects: [] })
             }
             setIsGenerating(false)
         }).catch(() => {
@@ -58,11 +71,13 @@ export default function ProjectsHub() {
     }, [chatHistory])
 
     const handleProjectSelect = async (proj: Project) => {
-        setSelectedProject(proj)
-        setChatHistory([{
-            role: 'ai',
-            content: `Generating a structured getting-started roadmap for **${proj.title}**...`
-        }])
+        updateProjectState({
+            selectedProject: proj,
+            history: [{
+                role: 'ai',
+                content: `Generating a structured getting-started roadmap for **${proj.title}**...`
+            }]
+        })
         setIsChatting(true)
 
         try {
@@ -70,15 +85,19 @@ export default function ProjectsHub() {
                 session_id: sessionId,
                 project_context: `Title: ${proj.title}\nDescription: ${proj.description}\nSkills Covered: ${proj.skills_covered.join(", ")}`
             })
-            setChatHistory([{
-                role: 'ai',
-                content: res.data.response
-            }])
+            updateProjectState({
+                history: [{
+                    role: 'ai',
+                    content: res.data.response
+                }]
+            })
         } catch (err) {
-            setChatHistory([{
-                role: 'ai',
-                content: `Switched to **${proj.title}**. What would you like to know about tackling this project?`
-            }])
+            updateProjectState({
+                history: [{
+                    role: 'ai',
+                    content: `Switched to **${proj.title}**. What would you like to know about tackling this project?`
+                }]
+            })
         } finally {
             setIsChatting(false)
         }
@@ -90,7 +109,8 @@ export default function ProjectsHub() {
 
         const userMsg = chatInput.trim()
         setChatInput("")
-        setChatHistory(prev => [...prev, { role: 'user', content: userMsg }])
+        const newHistory = [...chatHistory, { role: 'user', content: userMsg }] as any
+        updateProjectState({ history: newHistory })
         setIsChatting(true)
 
         try {
@@ -99,9 +119,13 @@ export default function ProjectsHub() {
                 message: userMsg,
                 project_context: `Title: ${selectedProject.title}\nDescription: ${selectedProject.description}\nSkills Covered: ${selectedProject.skills_covered.join(", ")}`
             })
-            setChatHistory(prev => [...prev, { role: 'ai', content: res.data.response }])
+            updateProjectState({
+                history: [...newHistory, { role: 'ai', content: res.data.response }]
+            })
         } catch (err) {
-            setChatHistory(prev => [...prev, { role: 'ai', content: "Sorry, I'm having trouble connecting to the network right now." }])
+            updateProjectState({
+                history: [...newHistory, { role: 'ai', content: "Sorry, I'm having trouble connecting to the network right now." }]
+            })
         } finally {
             setIsChatting(false)
         }

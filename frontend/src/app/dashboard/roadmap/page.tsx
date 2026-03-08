@@ -48,7 +48,18 @@ const PLATFORM_BADGE: Record<string, string> = {
 }
 
 export default function RoadmapDashboard() {
-    const { targetRole, targetJobDescription, currentSkills, roadmap, setRoadmap, isRoadmapLoading, setRoadmapLoading, sessionId, timeInvestment } = useAppStore()
+    const {
+        targetRole,
+        targetJobDescription,
+        currentSkills,
+        roadmap,
+        lastGeneratedParams,
+        setRoadmap,
+        isRoadmapLoading,
+        setRoadmapLoading,
+        sessionId,
+        timeInvestment
+    } = useAppStore()
     const router = useRouter()
 
     const handleExportPDF = () => {
@@ -62,6 +73,25 @@ export default function RoadmapDashboard() {
     useEffect(() => {
         if (!targetRole) { router.push("/dashboard/chat"); return }
 
+        // Check if we already have a roadmap for THESE exact parameters
+        const currentParams = {
+            targetRole,
+            targetJobDescription,
+            currentSkills,
+            timeInvestment
+        }
+
+        const isSameParams = lastGeneratedParams &&
+            lastGeneratedParams.targetRole === targetRole &&
+            lastGeneratedParams.targetJobDescription === targetJobDescription &&
+            lastGeneratedParams.timeInvestment === timeInvestment &&
+            JSON.stringify(lastGeneratedParams.currentSkills) === JSON.stringify(currentSkills)
+
+        if (roadmap && isSameParams) {
+            console.log("[Roadmap] Using cached roadmap for matching parameters.")
+            return
+        }
+
         setRoadmapLoading(true)
         setError(null)
         api.post('/roadmap/generate', {
@@ -71,9 +101,12 @@ export default function RoadmapDashboard() {
             current_skills: currentSkills,
             time_investment: timeInvestment
         })
-            .then(res => { setRoadmap(res.data); setRoadmapLoading(false) })
+            .then(res => {
+                setRoadmap(res.data, currentParams)
+                setRoadmapLoading(false)
+            })
             .catch(() => { setError("Failed to generate roadmap."); setRoadmapLoading(false) })
-    }, [targetRole, targetJobDescription, timeInvestment])
+    }, [targetRole, targetJobDescription, timeInvestment, currentSkills])
 
     const toggleComplete = useCallback((nodeId: string) => {
         setCompletedNodes(prev => {
@@ -325,7 +358,7 @@ export default function RoadmapDashboard() {
                             <rect x={targetX - 118} y={targetY - (NODE_H / 2) + 2} width={236} height={NODE_H - 4}
                                 rx="14" fill="#DF6C42" opacity="0.15" />
                             <text x={targetX} y={targetY + 5} textAnchor="middle" fill="#E5E6DA" fontSize="14" fontWeight="800" letterSpacing="0.5">
-                                🎯 {targetRole?.toUpperCase()}
+                                🎯 {(roadmap.role || targetRole || '').toUpperCase()}
                             </text>
                         </g>
 

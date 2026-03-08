@@ -23,7 +23,8 @@ interface EvaluationResult {
 
 export default function InterviewDashboard() {
     const router = useRouter()
-    const targetRole = useAppStore((s) => s.targetRole)
+    const { targetRole, roadmap } = useAppStore()
+    const displayRole = roadmap?.role || targetRole || "Software Engineer"
 
     const [sessionId, setSessionId] = useState<string | null>(null)
     const [isStarting, setIsStarting] = useState(false)
@@ -50,7 +51,7 @@ export default function InterviewDashboard() {
     const startInterview = async () => {
         try {
             setError(null); setIsStarting(true); setEvaluation(null)
-            const resp = await axios.post(`${API_BASE}/interview/start`, { target_role: targetRole || "Software Engineer" })
+            const resp = await axios.post(`${API_BASE}/interview/start`, { target_role: displayRole })
             setSessionId(resp.data.session_id)
             setTranscript([{ role: 'ai', text: resp.data.greeting }])
             await speakWithOpenAI(resp.data.greeting, resp.data.session_id)
