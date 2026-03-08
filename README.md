@@ -1,12 +1,13 @@
-# Skill-Bridge: AI-Powered Career Roadmap & Project Hub 🚀
+# Skill-Bridge: AI-Powered Career Roadmap & Project Hub 
 
 **Candidate Name:** rushiraj (rushi) rathod  
 **Scenario Chosen:** Skill-Bridge Career Navigator  
 **Estimated Time Spent:** 6 hours  
 **Demo Video:** [https://www.youtube.com/watch?v=xshf5NcRsxo](https://www.youtube.com/watch?v=xshf5NcRsxo)
+Video cut-out few second early but I was just saying 'Thank you🙂'
 
 ### Motivation
-The idea for this project came from something I noticed personally. Many students and early-career professionals know the fundamentals, but they struggle with the “final mile” gap—the difference between what they learn in school and the specific skills companies actually look for. I saw this with friends when someone transitioned from Chemical Engineering to Cloud Architecture. There was no clear roadmap—just scattered job postings and courses.
+The idea for this project came from something I noticed personally. Many students and early-career professionals know the fundamentals, but they struggle with the “final mile” gap, the difference between what they learn in school and the specific skills companies actually look for. I saw this with friends when someone transitioned from Chemical Engineering to Cloud Architecture. There was no clear roadmap, just scattered job postings and courses.
 
 ---
 
@@ -43,21 +44,52 @@ Skill-Bridge utilizes a multi-layered ML approach to ensure high-fidelity career
 ### 4. Fuzzy Aggregation & Analysis
 - **Fuzzy String Matching**: Consolidation of disparate skill terminology across 100+ job sources.
 - **Weighted Word Overlap**: Prioritizes job description relevance based on title and skill density.
+--- 
+# Project Architecture (high level)
 
+Frontend (Next.js)
+        |
+        |
+    FastAPI API
+        |
+        |
+   AI Orchestration
+     (LangChain)
+        |
+        |
+Vector Search (FAISS)
+        |
+        |
+Course Dataset (40k+)
+        |
+        |
+   SQLite Storage
+   
 ---
 
 ## AI Disclosure
 - **Did you use an AI assistant (Copilot, ChatGPT, etc.)?** Yes (Cloud Code / Antigravity).
 - **How did you verify the suggestions?** Manual code review, running automated tests (Pytest), and performing live functional verification to ensure state persistence and correct data propagation.
-- **Give one example of a suggestion you rejected or changed:** I rejected a suggestion to use a cloud-based vector database (Pinecone). Instead, I implemented a local **FAISS** index to eliminate network latency and keep the architecture high-performance and cost-efficient for this specific use case.
+- **Give one example of a suggestion you rejected or changed:** At one point, the AI suggested a FastAPI implementation that returned course recommendations but did not properly handle edge cases where no vector results were returned. This would have caused the API to crash when the FAISS index returned an empty list.
+
+I rewrote that section to add proper validation and fallback logic so the system returns a safe response instead of failing.
 
 ## Tradeoffs & Prioritization
-- **What did you cut to stay within the 4–6 hour limit?** I prioritized architectural stability, core AI logic, and state persistence over secondary features like **User Authentication**. I also chose to integrate a high-quality Kaggle dataset with 40,000+ real entries instead of building a real-time web scraper, ensuring immediate data reliability for the demo.
+- **What did you cut to stay within the 4–6 hour limit?** I prioritized architectural stability, core AI logic, and state persistence over secondary features like **User Authentication**.
 - **What would you build next if you had more time?** I would implement **OAuth-based authentication** (GitHub/Google) to enable personalized user profiles, deeper **persona-based outcomes** (advanced career-switching logic), and real-time job market trend analysis via APIs.
-- **Known limitations**: Course data is static from the dataset, the platform currently lacks a persistent user login system, and voice recognition (Whisper) performs best in quiet environments.
+- **Known limitations**: Course data is static from the dataset, the platform currently lacks a persistent user login system, and voice recognition (Whisper) performs best in quiet environments. AI responses may occasionally contain inaccuracies or hallucinations. For this reason, the platform includes AI disclaimers reminding users that recommendations should be used as guidance.
 
 ---
+## Responsible AI
 
+The project was designed with responsible AI practices in mind.
+	•	AI recommendations are treated as guidance, not guaranteed answers
+	•	The interface includes AI disclaimers so users understand that results may not always be perfect
+	•	The system does not make automated hiring decisions
+	•	No sensitive personal data is stored
+
+The goal is to use AI as a decision-support tool rather than replacing human judgment.
+--- 
 ## Getting Started
 
 ### 1. Prerequisites
