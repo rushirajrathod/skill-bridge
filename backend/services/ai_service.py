@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 
 from models import CourseRecommendation, ProjectRecommendation, CertificationRecommendation
 
-load_dotenv()
+load_dotenv(override=True)
 
 # Initialize Models
 chat_llm = ChatOpenAI(

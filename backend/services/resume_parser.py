@@ -43,7 +43,7 @@ async def extract_skills_from_resume(text: str) -> List[str]:
     ])
     
     try:
-        response = chat_llm.invoke(prompt.format(text=text[:4000])) # Limit to 4000 chars to save tokens on massive resumes
+        response = chat_llm.invoke(prompt.format_messages(text=text[:4000])) 
         content = response.content.strip()
         
         if content.upper() == "NONE":
