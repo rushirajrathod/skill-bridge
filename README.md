@@ -65,10 +65,10 @@ I rewrote that section to add proper validation and fallback logic so the system
 ## Responsible AI
 
 The project was designed with responsible AI practices in mind.
-	•	AI recommendations are treated as guidance, not guaranteed answers
-	•	The interface includes AI disclaimers so users understand that results may not always be perfect
-	•	The system does not make automated hiring decisions
-	•	No sensitive personal data is stored
+	-	AI recommendations are treated as guidance, not guaranteed answers
+	-	The interface includes AI disclaimers so users understand that results may not always be perfect
+	-	The system does not make automated hiring decisions
+	-	No sensitive personal data is stored
 
 The goal is to use AI as a decision-support tool rather than replacing human judgment.
 --- 
