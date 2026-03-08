@@ -44,27 +44,7 @@ Skill-Bridge utilizes a multi-layered ML approach to ensure high-fidelity career
 ### 4. Fuzzy Aggregation & Analysis
 - **Fuzzy String Matching**: Consolidation of disparate skill terminology across 100+ job sources.
 - **Weighted Word Overlap**: Prioritizes job description relevance based on title and skill density.
---- 
-## Project Architecture (high level)
 
-User
-  |
-  v
-Frontend (Next.js / React)
-  |
-  v
-FastAPI Backend API
-  |
-  v
-AI Orchestration Layer (LangChain)
-  |
-  +----------------------+
-  |                      |
-  v                      v
-Vector Search (FAISS)   SQLite Database
-  |                      |
-  v                      v
-Course Dataset (40,000+)  Application Data
    
 ---
 
@@ -127,3 +107,6 @@ npm test
 ```
 
 Navigate to `http://localhost:3000` to start your career transition roadmap!
+---
+## 4. Demo testing
+I have provided job descriptions sample and resume for demo testing
