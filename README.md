@@ -4,7 +4,7 @@
 **Scenario Chosen:** Skill-Bridge Career Navigator  
 **Estimated Time Spent:** 6 hours  
 **Demo Video:** [https://www.youtube.com/watch?v=xshf5NcRsxo](https://www.youtube.com/watch?v=xshf5NcRsxo)
-Video cut-out few second early but I was just saying 'Thank you🙂'
+** Demo Video cut-out few second early but I was just saying 'Thank you🙂'
 
 ### Motivation
 The idea for this project came from something I noticed personally. Many students and early-career professionals know the fundamentals, but they struggle with the “final mile” gap, the difference between what they learn in school and the specific skills companies actually look for. I saw this with friends when someone transitioned from Chemical Engineering to Cloud Architecture. There was no clear roadmap, just scattered job postings and courses.
