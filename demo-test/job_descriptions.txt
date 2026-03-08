@@ -1,0 +1,44 @@
+Role: Junior Machine Learning Engineer
+
+About the Role:
+We are looking for a Junior ML Engineer to help us build and deploy predictive models. You will work closely with our data science team to clean datasets, train models, and integrate them into our production environment.
+
+Required Skills:
+- Proficiency in Python and familiarity with ML libraries (Scikit-Learn, Pandas, NumPy).
+- Hands-on experience with Deep Learning frameworks like PyTorch or TensorFlow.
+- Understanding of SQL and NoSQL databases (PostgreSQL, MongoDB).
+- Familiarity with version control using Git.
+- Basic knowledge of cloud platforms (AWS or Google Cloud).
+- Strong problem-solving skills and a passion for data-driven insights.
+
+Bonus Points:
+- Experience with Docker and containerization.
+- Knowledge of MLOps principles.
+
+
+Role: Mobile Application Developer (React Native)
+Job Description:
+We are looking for a Mobile Application Developer to build user-friendly mobile applications for Android and iOS. You will work closely with designers and backend engineers to deliver high-quality mobile experiences.
+What we are looking for:
+Experience with React Native or Flutter.
+Knowledge of JavaScript or TypeScript.
+Familiarity with REST APIs and mobile data management.
+Experience building responsive and performant mobile apps.
+Understanding of mobile UI/UX best practices.
+Ability to debug and optimize application performance.
+Education:
+Bachelor’s degree in Computer Science, Software Engineering, or equivalent experience.
+
+
+Role: DevOps Engineer (Cloud & Automation)
+Job Description:
+We are seeking a DevOps Engineer to help build and maintain the infrastructure that powers our cloud-based applications. You will automate deployments, manage CI/CD pipelines, and ensure system reliability.
+What we are looking for:
+Experience with cloud platforms such as AWS, Azure, or Google Cloud.
+Knowledge of containerization technologies like Docker and Kubernetes.
+Experience building CI/CD pipelines using GitHub Actions, Jenkins, or GitLab CI.
+Familiarity with infrastructure-as-code tools such as Terraform or CloudFormation.
+Understanding of monitoring tools like Prometheus or Grafana.
+Strong problem-solving and debugging skills.
+Education:
+Bachelor’s degree in Computer Science, Information Technology, or equivalent experience.
