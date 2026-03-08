@@ -48,7 +48,7 @@ const PLATFORM_BADGE: Record<string, string> = {
 }
 
 export default function RoadmapDashboard() {
-    const { targetRole, currentSkills, roadmap, setRoadmap, isRoadmapLoading, setRoadmapLoading, sessionId, timeInvestment } = useAppStore()
+    const { targetRole, targetJobDescription, currentSkills, roadmap, setRoadmap, isRoadmapLoading, setRoadmapLoading, sessionId, timeInvestment } = useAppStore()
     const router = useRouter()
 
     const handleExportPDF = () => {
@@ -61,13 +61,19 @@ export default function RoadmapDashboard() {
 
     useEffect(() => {
         if (!targetRole) { router.push("/dashboard/chat"); return }
-        if (roadmap && roadmap.role === targetRole) return
+
         setRoadmapLoading(true)
         setError(null)
-        api.post('/roadmap/generate', { session_id: sessionId, target_role: targetRole, current_skills: currentSkills, time_investment: timeInvestment })
+        api.post('/roadmap/generate', {
+            session_id: sessionId,
+            target_role: targetRole,
+            target_job_description: targetJobDescription,
+            current_skills: currentSkills,
+            time_investment: timeInvestment
+        })
             .then(res => { setRoadmap(res.data); setRoadmapLoading(false) })
             .catch(() => { setError("Failed to generate roadmap."); setRoadmapLoading(false) })
-    }, [targetRole])
+    }, [targetRole, targetJobDescription, timeInvestment])
 
     const toggleComplete = useCallback((nodeId: string) => {
         setCompletedNodes(prev => {
@@ -132,7 +138,7 @@ export default function RoadmapDashboard() {
     // Build node data structure
     const nodes: RoadmapNode[] = []
     const targetNode: RoadmapNode = {
-        id: 'target', label: targetRole || '', type: 'target', status: 'pending', children: []
+        id: 'target', label: roadmap.role || targetRole || '', type: 'target', status: 'pending', children: []
     }
     nodes.push(targetNode)
 
@@ -184,7 +190,7 @@ export default function RoadmapDashboard() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
                 <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-3">
                     <span className="text-cream">Roadmap to </span>
-                    <span className="text-ember">{targetRole}</span>
+                    <span className="text-ember">{roadmap.role || targetRole}</span>
                 </h1>
                 <p className="text-cream/30 text-sm">
                     {gaps.length} skill gaps identified · {courses.length} courses recommended · {analytics.estimated_weeks || '?'} weeks estimated

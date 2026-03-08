@@ -412,34 +412,67 @@ def generate_mentorship_guide(mentee_role: str, target_role: str, missing_skills
         print(f"Error generating mentorship guide: {e}")
         return ""
 
-def extract_skills_from_jd(jd_text: str, current_skills: List[str]) -> List[str]:
-    """Extracts required skills from a raw Job Description and returns the ones the user is missing."""
+def extract_skills_from_jd(jd_text: str, current_skills: List[str]) -> dict:
+    """
+    Analyzes raw JD text to extract the intended Job Title and a precise list of missing skills.
+    Returns: {"role": str, "required_skills": List[str], "missing_skills": List[str]}
+    """
     prompt = ChatPromptTemplate.from_messages([
-        ("system", """You are an expert technical recruiter and resume reviewer.
+        ("system", """You are a world-class Technical Recruiter and Skill Matcher.
+Analyze the provided Job Description (JD) text with extreme technical rigor.
 
-Below is a raw Job Description provided by a company.
-Analyze this text and extract the core REQUIRED technical and soft skills needed for the role.
+GOALS:
+1. ROLE NAME: Exact job title intended for this role.
+2. REQUIRED SKILLS: All specific technical tools, libraries, and soft skills listed.
+3. MISSING SKILLS: Skills from the JD that the user does NOT explicitly have in their list.
 
-Then, compare your extracted required skills against the user's CURRENT SKILLS:
+STRICT MATCHING RULES:
+- **No Assumptions**: Do NOT assume a user knows a library (e.g. 'Scikit-Learn') just because they list a category (e.g. 'Machine Learning').
+- **Explicit Check**: For every skill in the JD, check if a direct match or very close synonym exists in the candidate's list.
+- **Bonus Counts**: If a skill is listed as 'Bonus' or 'Plus', it is still a REQUIRED SKILL for the purpose of this analysis.
+
+EXAMPLE:
+JD: "Requires Python, PyTorch, and SQL."
+Candidate Skills: ["Python", "Machine Learning", "Databases"]
+Result: {{
+  "role": "ML Engineer",
+  "required_skills": ["Python", "PyTorch", "SQL"],
+  "missing_skills": ["PyTorch", "SQL"]
+}}
+
+Candidate's Explicit Skills:
 {current_skills}
 
-Return ONLY the skills from the Job Description that the user is MISSING.
-Be concise. Return a JSON array of skill strings. Example: ["Python", "AWS", "Agile"]"""),
+Return exactly this JSON structure:
+{{
+  "role": "Extracted Title",
+  "required_skills": ["Skill 1", "Skill 2"],
+  "missing_skills": ["Skill 1", "Skill 3"]
+}}
+Return ONLY valid JSON."""),
         ("user", "{jd_text}")
     ])
     
     try:
         chain = prompt | chat_llm | JsonOutputParser()
-        missing = chain.invoke({
+        result = chain.invoke({
             "current_skills": json.dumps(current_skills),
             "jd_text": jd_text
         })
-        if isinstance(missing, list):
-            return [str(m).title() for m in missing]
-        return []
+        
+        # Ensure normalization
+        return {
+            "role": result.get("role", "Custom Role").title(),
+            "required_skills": [str(s).title() for s in result.get("required_skills", [])],
+            "missing_skills": [str(s).title() for s in result.get("missing_skills", [])]
+        }
     except Exception as e:
-        print(f"Failed to extract skills from JD: {e}")
-        return ["Communication", "Problem Solving", "Relevant Technical Skills"]
+        print(f"Failed to extract skills/role from JD: {e}")
+        return {
+            "role": "Custom Application",
+            "required_skills": ["Relevant Technical Skills"],
+            "missing_skills": ["Relevant Technical Skills"]
+        }
 
 
 def perform_gap_analysis(current_skills: List[str], target_role: str):
